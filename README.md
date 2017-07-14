@@ -1,2 +1,2 @@
 # MeteoSMS
-Projet de recevoir la météo du jour et des 3 jour suivant par sms
+Projet de recevoir la météo du jour et des 2 jours suivant par sms selon la localité
