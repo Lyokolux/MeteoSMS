@@ -23,8 +23,7 @@ def parsing(pageHTML):
 	for element in data_clock:
 		message_clock.append(element.get_text())
 
-	data_temperature = content_page.find_all("li",
-		class_="day-summary-temperature")
+	data_temperature = content_page.find_all("li", class_="day-summary-temperature")
 	message_temperature = []
 	count = 1
 	for element in data_temperature:
@@ -48,9 +47,9 @@ def parsing(pageHTML):
 
 	return message
 
-#---------------------
-#  Reading 
-#---------------------
+#---------------------#
+#  Reading 		      #
+#---------------------#
 
 pageFile = urlopen('http://www.meteofrance.com/'\
 	'previsions-meteo-france/metz/57000')
@@ -58,12 +57,12 @@ pageHTML = pageFile.read()
 message = parsing(pageHTML)
 pageFile.close()
 
-#---------------------
-# Envoi du sms
-#---------------------
+#---------------------#
+# Envoi du sms        #
+#---------------------#
 
-user='22084257'
-pas='mzd6hmbIgJTAGq'
+user='YOUR_USER'
+pas='YOUR_PASSWORD'
 
 #quote convert from utf-8 to ASCII
 texte = str(message)
